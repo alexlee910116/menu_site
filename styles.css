@@ -1,81 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html {
     font-size: 100%;
 }
 
 body {
-    font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
+    font-family:"Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
 }
+
 
 img {
     max-width: 100%;
 }
 
-ul {
+li {
     list-style: none;
 }
 
 a {
-    color: #2b2a27;
+    color: black;
 }
-  
 
-#mainvisual img {
+
+.mainvisual img {
     width: 100%;
-    height: 100%;
-    margin-bottom: 80px;
+    height: 100vh;
+    margin-bottom: 60px;
+    object-fit: cover;
+
 }
 
-.text {
+.recipe {
     text-align: center;
-    margin-bottom: 80px;
-    padding: 0 20px;
+    margin-bottom: 60px;
 }
 
-.text .btn {
-    display: inline-block;
-    border: solid 1px;
-    text-decoration: none;
-    padding: 18px 60px;
-}
-
-.content-img {
+.dish-img {
     display: flex;
-    margin-bottom: 50px;
-    padding: 0 0;
+    margin-bottom: 60px;
 }
 
-.content-img li {
-    width: calc(100%/3);
+.dish-img li {
+    flex: 1;
 }
 
-.content-img li img {
-    width: 100%;
+.dish-img img {
     height: 500px;
-    object-fit: cover; 
-    vertical-align: bottom;
+    width: 100%;
+    object-fit: cover;
+
 }
 
-#footer {
+.btn {
     text-align: center;
+    padding-bottom: 60px;
 }
-.sns {
+
+.btn a {
+    border: solid 1px black;
+    display: inline-block;
+    padding: 10px 20px 10px 20px;
+    display: inline-block;
+}
+
+.footer {
+    font-size: 0.7em;
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+
+    
+}
+
+.footer ul {
     display: flex;
     justify-content: center;
 }
-.footer .sns li {
+
+.footer li {
     margin: 0 10px;
-}
-p {
-    text-align: center;
-    padding: 10px 0;
+    margin-bottom: 20px;
 }
 
-@media screen and (max-width: 834px) {
-    .content-img {
-        flex-direction:column ;
-    }
-    .content-img li {
-        width: 100%;
-        padding: 0;
-    }
+.copyright {
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width:834px) {
+   .dish-img {
+    flex-direction: column;
+   }
+   .dish-img li {
+    width: 100%
+   }
 }
